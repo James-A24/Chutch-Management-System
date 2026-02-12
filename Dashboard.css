@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #00b4d8;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color:  #0077b6;
+}
+
+.sidebar:hover{
+    width: 300px;
+    transition: 0.9s;
+    background-image: linear-gradient(to right,#00b4d8, #0077b6);
+}
+
+.logo {
+    height: 90px;
+    padding: 21px;
+}
+.menu {
+    height: 80%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover {
+    background: #e0c0e053;
+}
+
+.menu a{
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Body of the Dashboard*/
+
+.main--content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    border-radius: 75%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: #0077b6;
+}
+
+.user--info
+{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.search--box{
+    background-color: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 4px 9px;
+}
+
+.search--box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease out;
+}
+
+.fa {
+    color: #0077b6;
+    }
+.search--box i:hover{
+    transform: scale(1.1);
+}
+
+/* Card container*/
+
+.card--container {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main--title {
+    color: #0077b6;
+    padding-bottom: 9px;
+    font-size: 15px;
+}
+
+.members--card {
+    background: rgb(229, 223, 223);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.members--card:hover {
+    transform: translateY(5px);
+}
+
+.class--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 210px;
+}
+
+.total--members {
+    font-size: 36px;   
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600px;
+}
+
+/* tabular wrapper */
+.tabular--wrapper {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table--conatainer {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+} 
+
+thead {
+    background: #0077b6;
+    color:#fff;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+tfoot {
+    background: #0077b6;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td{
+    padding: 15px;
+    color: #fff;
+}
+
+.table--container button {
+    color: green;
+    background-color: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

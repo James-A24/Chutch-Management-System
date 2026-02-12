@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #00b4d8;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color:  #0077b6;
+}
+
+.sidebar:hover{
+    width: 300px;
+    transition: 0.9s;
+    background-image: linear-gradient(to right,#00b4d8, #0077b6);
+}
+
+.logo {
+    height: 90px;
+    padding: 21px;
+}
+
+.menu {
+    height: 80%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 12px 0;
+    border-radius: 9px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover {
+    background: #e0c0e053;
+}
+
+.menu a{
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Body of the Dashboard*/
+
+.main--content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    border-radius: 75%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: #0077b6;
+}
+
+.user--info
+{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.search--box{
+    background-color: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 4px 9px;
+}
+
+.fa {
+color: #0077b6;
+}
+
+.search--box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease out;
+}
+
+.search--box i:hover{
+    transform: scale(1.1);
+}
+
+/* tabular wrapper */
+.tabular--wrapper {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table--conatainer {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+} 
+
+thead {
+    background: #0077b6;
+    color:#fff;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+tfoot {
+    background: #0077b6;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td{
+    padding: 15px;
+    color: #fff;
+}
+
+/* Misc */
+.main--title {
+    color: #0077b6;
+    padding-bottom: 9px;
+    font-size: 18px;
+}
+
+.search--box {
+    background-color: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items:center;
+    gap: 4px;
+    padding: 4px 9px;
+    width: 300px;
+}
+
+.search--box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.adding {
+    text-align: right;
+    margin-top: 3px;
+}
+
+.btn {
+    background-color: rgb(237, 237, 237);
+    border-radius: 21px;
+    color: rgba(113, 99, 186, 255);
+    align-items:center;
+    gap: 6px;
+    padding: 6px 9px;
+    width: 150px;
+}
+
+.btn:hover {
+    background: #0077b6;
+    cursor: pointer;
+    -webkit-text-fill-color: #fff;
+    
+}
+
+/*POP UP FORM*/
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Button used to open the contact form - fixed at the bottom of the page */
+  .open-button {
+    background-color:#ccc; 
+    border-radius: 6px;
+    padding: 6px; /* Increased padding for better appearance */
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    font-size: 15px; /* Increased font size */
+    color: #fff; /* Text color */
+    transition: background-color 0.3s; /* Smooth color transition */
+  }
+  
+  .open-button:hover {
+    background-color: #00b4d8; /* Darker blue on hover */
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    border-radius: 12px;
+    max-width: 400px; 
+    margin: 0 auto; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    padding: 21px;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text] {
+    width: calc(100% - 20px); /* Calculate width with padding */
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9; 
+  }
+
+  .form-container input[type=email] {
+    width: calc(100% - 20px); /* Calculate width with padding */
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9; 
+  }
+
+  .form-container select[name] {
+    width: calc(100% - 20px); /* Calculate width with padding */
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9; 
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 6px;
+    transition: background-color 0.3s; /* Smooth color transition */
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover,
+  .open-button:hover {
+    background-color: #0077b6;
+  }
+  
+  /* Add margin to the bottom of the button */
+  .open-button {
+    margin-bottom: 9px;
+  }
+  
+
+
+

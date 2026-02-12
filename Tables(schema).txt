@@ -1,0 +1,41 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table member {
+  id serial
+  first_name varchar [not null]
+  last_name varchar [not null]
+  surname varchar
+  email_address varchar [not null]
+  Status varchar
+}
+
+Table groups {
+  id serial [primary key]
+  group_name varchar [not null]
+}
+
+Table room {
+  id serial 
+  room_name varchar [not null]
+}
+
+Table room_group {
+  group_id integer [pk]
+  room_id integer [pk] 
+}
+
+Table member_group {
+  member_id integer [pk]
+  group_id integer [pk]
+}
+
+
+
+Ref: "groups"."id" < "room_group"."group_id"
+
+Ref: "room"."id" < "room_group"."room_id"
+
+Ref: "member"."id" < "member_group"."member_id"
+
+Ref: "member_group"."group_id" < "groups"."id"
